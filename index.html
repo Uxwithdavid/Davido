@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZPPHJKRHE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5ZPPHJKRHE');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="David Okeke is a repeat founder, product manager, and UI/UX designer building AI-powered commerce and financial infrastructure from zero to one across startups, banks, and public sector programs.">
+  <meta name="author" content="David Okeke">
+  <meta name="keywords" content="David Okeke, Product Manager, UI/UX Designer, Figma, Forward Deployed Engineer, Zero to One, Repeat Founder, Fintech, AI-Powered Commerce, Financial Infrastructure, Stablecoin Remittance, Digital Banking, Conversational Commerce, PRDs, Agile, Product Strategy, Africa, Nigeria">
+  <meta name="robots" content="index, follow">
+
+  <!-- Theme Colors -->
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffead3">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="David Okeke - Product Manager, UI/UX Designer & Forward Deployed Engineer">
+  <meta property="og:description" content="David Okeke is a repeat founder, product manager, and UI/UX designer building AI-powered commerce and financial infrastructure from zero to one across startups, banks, and public sector programs.">
+  <meta property="og:image" content="https://uxwithdavid.github.io/Davido/social-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="David Okeke - Product Manager, UI/UX Designer & Forward Deployed Engineer">
+  <meta property="og:url" content="https://uxwithdavid.github.io/Davido/">
+  <meta property="og:site_name" content="David Okeke">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Derealdavid">
+  <meta name="twitter:creator" content="@Derealdavid">
+  <meta name="twitter:title" content="David Okeke - Product Manager, UI/UX Designer & Forward Deployed Engineer">
+  <meta name="twitter:description" content="David Okeke is a repeat founder, product manager, and UI/UX designer building AI-powered commerce and financial infrastructure from zero to one across startups, banks, and public sector programs.">
+  <meta name="twitter:image" content="https://uxwithdavid.github.io/Davido/social-preview.jpg">
+  <meta name="twitter:image:alt" content="David Okeke - Product Manager, UI/UX Designer & Forward Deployed Engineer">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://uxwithdavid.github.io/Davido/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" id="favicon">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <title>David Okeke - Product Manager, UI/UX Designer & Forward Deployed Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-light: #ffead3;
+      --text-dark: #121212;
+      --text-muted: #8b7355;
+      --text-dark-80: #3f3c36;
+      --text-dark-90: #282520;
+      --text-muted-70: #b09a7e;
+      --spacing: clamp(16px, 3vw, 40px);
+      --line-color: #c9b99a;
+    }
+
+    /* Selection/highlight colors */
+    ::selection {
+      background-color: var(--text-dark);
+      color: var(--bg-light);
+    }
+
+    ::-moz-selection {
+      background-color: var(--text-dark);
+      color: var(--bg-light);
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Cursor follower circle - hidden on touch devices */
+    .cursor-follower {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ffead3;
+      position: fixed;
+      pointer-events: none;
+      z-index: 99999;
+      transform: translate(-50%, -50%);
+      transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      mix-blend-mode: difference;
+    }
+
+    .cursor-follower.hovering {
+      width: 30px;
+      height: 30px;
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+      .cursor-follower {
+        display: none !important;
+      }
+    }
+
+    body {
+      font-family: 'Geist Mono', monospace;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+    }
+
+    /* Transition for all elements using theme colors */
+    *, *::before, *::after {
+      transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out, border-color 0.8s ease-in-out;
+    }
+
+    /* Main layout */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      height: calc(100vh - 52px);
+      height: calc(100dvh - 52px);
+      padding: var(--spacing);
+      padding-bottom: 0;
+      gap: var(--spacing);
+    }
+
+    /* Default: sidebar takes 1 column, content takes 3 columns */
+    .sidebar {
+      grid-column: 1 / 2;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: grid-column 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .content {
+      grid-column: 2 / 5;
+      overflow: visible;
+      position: relative;
+      transition: grid-column 0.3s ease-in-out;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* Contact bar — fixed bottom bar on all screen sizes */
+    .contact-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--spacing);
+      background-color: var(--bg-light);
+      z-index: 100;
+      transition: background-color 0.8s ease-in-out;
+    }
+
+    .profile-photo {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: var(--text-muted);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .contact-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      margin-left: auto;
+    }
+
+    .contact-bar a {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .contact-bar a:hover {
+      color: var(--text-dark);
+      text-decoration: none;
+    }
+
+    .contact-bar .dot {
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+
+    .nav-item {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: color 0.2s ease;
+      background: none;
+      border: none;
+      text-align: left;
+      font-family: inherit;
+      padding: 0;
+      width: fit-content;
+      white-space: nowrap;
+    }
+
+    .nav-item:hover {
+      color: var(--text-dark);
+    }
+
+    .nav-item.active {
+      color: var(--text-dark);
+    }
+
+    /* Sections - stacked with fade transitions */
+    section {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+      will-change: opacity;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 52px;
+    }
+
+    section.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .section-description {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(24px, 4vw, 35px);
+      line-height: 1.3;
+      color: var(--text-dark);
+      margin-bottom: clamp(20px, 3vw, 32px);
+    }
+
+    .section-description strong {
+      font-weight: 600;
+    }
+
+    /* About intro - responsive sizing */
+    .about-intro {
+      font-size: clamp(18px, 3.5vw, 54px);
+      overflow: hidden;
+    }
+
+    /* Ensure About section never scrolls on desktop */
+    #about {
+      overflow: hidden !important;
+    }
+
+    .about-intro a {
+      color: var(--text-dark);
+      text-decoration: none;
+    }
+
+    .typewriter-text {
+      font-family: 'Instrument Serif', serif;
+      font-size: inherit;
+      font-weight: 400;
+      color: var(--text-dark);
+    }
+
+    .typewriter-cursor {
+      font-family: 'Instrument Serif', serif;
+      font-size: inherit;
+      font-weight: 400;
+      color: var(--text-dark);
+      animation: blink 0.7s infinite;
+      margin-left: 2px;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+
+    /* Items list */
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .item {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: clamp(12px, 2vw, 24px);
+      align-items: start;
+      padding-top: 16px;
+    }
+
+    .item-meta {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      padding-top: 4px;
+      border-top: 1px solid var(--line-color);
+    }
+
+    .item-meta:empty {
+      border-top: none;
+    }
+
+    /* Extra spacing before year sections (non-empty meta = new year group) */
+    .item:has(.item-meta:not(:empty)) + .item:has(.item-meta:not(:empty)) {
+      margin-top: 0;
+    }
+
+    .items > .item:has(.item-meta:not(:empty)):not(:first-child) {
+      margin-top: 24px;
+    }
+
+    /* Ensure content stays in column 2 even when meta is empty */
+    .item-content {
+      grid-column: 2;
+    }
+
+    .item-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-top: 4px;
+      border-top: 1px solid var(--line-color);
+    }
+
+    .item-title {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .item-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .item-site-link {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      color: var(--text-muted-70);
+      margin-top: 4px;
+      text-decoration: none;
+    }
+
+    .item-site-link:hover {
+      color: var(--text-dark-80);
+      text-decoration: underline;
+    }
+
+    /* Project-specific hierarchy styles */
+    .item-description {
+      font-size: 13px;
+      color: var(--text-dark-80);
+      margin-top: 2px;
+    }
+
+    .item-description ul {
+      margin: 4px 0 0 0;
+      padding-left: 16px;
+      list-style-type: disc;
+    }
+
+    .item-description ul li {
+      margin-bottom: 4px;
+    }
+
+    .item-description ul li a {
+      color: var(--text-dark-90);
+    }
+
+    .item-tools {
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .item-stats {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted-70);
+      margin-top: 8px;
+    }
+
+    .item-tags {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted-70);
+      margin-top: 4px;
+    }
+
+    /* Expandable project cards */
+    .project-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      font: inherit;
+      font-size: 14px;
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .toggle-icon {
+      font-size: 15px;
+      line-height: 1;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      transition: transform 0.25s ease;
+    }
+
+    .project-item.expanded .toggle-icon {
+      transform: rotate(45deg);
+    }
+
+    .item-description-full {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+
+    .project-item.expanded .item-description-full {
+      max-height: 1200px;
+    }
+
+    .item-description-full ul {
+      margin: 10px 0 0 0;
+      padding-left: 16px;
+      list-style-type: disc;
+    }
+
+    .item-description-full ul li {
+      font-size: 13px;
+      color: var(--text-dark-80);
+      line-height: 1.55;
+      margin-bottom: 8px;
+    }
+
+    .item-description-full ul li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Dark mode toggle button */
+    .theme-toggle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      background-color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      margin-top: 16px;
+      flex-shrink: 0;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      --bg-light: #121212;
+      --text-dark: #ffead3;
+      --text-muted: #a89880;
+      --text-dark-80: #d4c1ad;
+      --text-dark-90: #e9d6c0;
+      --text-muted-70: #7d7260;
+      --line-color: #3d3d3d;
+    }
+
+    /* Custom scrollbar - hidden by default, visible on hover */
+    section {
+      scrollbar-width: thin;
+      scrollbar-color: transparent transparent;
+    }
+
+    section:hover {
+      scrollbar-color: var(--line-color) transparent;
+    }
+
+    section::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    section::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    section::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 3px;
+      transition: background 0.3s ease;
+    }
+
+    section:hover::-webkit-scrollbar-thumb {
+      background: var(--line-color);
+    }
+
+    section::-webkit-scrollbar-thumb:hover {
+      background: var(--text-muted);
+    }
+
+    /* Scroll indicator arrow */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 56px;
+      right: 12px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 10;
+      background: var(--bg-light);
+      border: 1px solid var(--line-color);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    .scroll-indicator:hover {
+      border-color: var(--text-muted);
+    }
+
+    .scroll-indicator.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-indicator svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--text-muted);
+      animation: bounce 2s infinite;
+      will-change: transform;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(3px);
+      }
+      60% {
+        transform: translateY(1px);
+      }
+    }
+
+    /* Links */
+    a {
+      color: var(--text-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* About section link - always underlined */
+    .about-static a {
+      text-decoration: underline;
+    }
+
+    /* Loading Screen Styles */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #121212;
+      z-index: 100000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    .loading-screen.hidden {
+      transform: translateY(-100%);
+    }
+
+    .loading-content {
+      text-align: center;
+      color: #ffead3;
+      font-family: 'Geist Mono', monospace;
+    }
+
+    .loading-percentage {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+    }
+
+    /* Main wrapper for swipe animation */
+    .main-wrapper {
+      min-height: 100vh;
+      min-height: 100dvh;
+      transform: translateY(100vh);
+      transform: translateY(100dvh);
+      transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    .main-wrapper.visible {
+      transform: translateY(0);
+    }
+
+    /* ============================================
+       RESPONSIVE BREAKPOINTS
+       ============================================ */
+
+    /* Tablet: 2-column layout */
+    @media (max-width: 1024px) {
+      .layout {
+        grid-template-columns: 1fr 2fr;
+      }
+      .sidebar {
+        grid-column: 1 / 2;
+      }
+      .content {
+        grid-column: 2 / 3;
+      }
+    }
+
+    /* ---- Mobile top bar with theme toggle + hamburger ---- */
+    .mobile-top-bar {
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+      width: 28px;
+      height: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .hamburger-line {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--text-dark);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .hamburger.open .hamburger-line:first-child {
+      transform: translateY(4px) rotate(45deg);
+    }
+
+    .hamburger.open .hamburger-line:last-child {
+      transform: translateY(-4px) rotate(-45deg);
+    }
+
+    /* Mobile: stacked layout */
+    @media (max-width: 768px) {
+      html, body {
+        overflow: auto;
+        height: auto;
+      }
+
+      /* Show mobile top bar */
+      .mobile-top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 12px;
+        padding: var(--spacing) var(--spacing) 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10020;
+        transition: background-color 0.8s ease-in-out;
+      }
+
+      .mobile-top-bar .theme-toggle {
+        margin-top: 0;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: calc(100vh - 52px);
+        height: calc(100dvh - 52px);
+        padding-top: calc(var(--spacing) + 36px);
+      }
+
+      /* Hide sidebar theme toggle (it's in top bar now) */
+      .nav-links .theme-toggle {
+        display: none;
+      }
+
+      /* Sidebar = full-screen overlay */
+      .sidebar {
+        position: fixed;
+        inset: 0;
+        z-index: 10010;
+        background-color: var(--bg-light);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 60px var(--spacing);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.8s ease-in-out;
+        will-change: opacity;
+      }
+
+      .sidebar.menu-open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .nav-item {
+        font-size: 14px;
+        letter-spacing: 0.2em;
+      }
+
+      .contact-bar .contact-links {
+        gap: 8px;
+      }
+
+      .contact-bar .dot {
+        font-size: 11px;
+      }
+
+      .contact-bar a {
+        font-size: 11px;
+      }
+
+      .content {
+        grid-column: 1;
+        grid-row: 1;
+        min-height: 0;
+      }
+
+      /* About section can scroll on mobile */
+      #about {
+        overflow-y: auto !important;
+      }
+
+      .about-intro {
+        font-size: 10vw !important;
+        max-height: none !important;
+        line-height: 1.2 !important;
+      }
+
+      .section-description {
+        font-size: clamp(24px, 6vw, 32px);
+        margin-bottom: 20px;
+      }
+
+      /* Stack items vertically on mobile */
+      .item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .item-content {
+        grid-column: 1;
+      }
+
+      .item-meta:empty {
+        display: none;
+      }
+
+      .scroll-indicator {
+        bottom: 40px;
+        right: 8px;
+      }
+
+      /* On mobile: contact bar centered in overlay */
+      .contact-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0;
+      }
+    }
+
+    /* Small mobile */
+    @media (max-width: 480px) {
+      .about-intro {
+        font-size: 9.5vw !important;
+        line-height: 1.2 !important;
+      }
+
+      .item-title {
+        font-size: 13px;
+      }
+
+      .item-subtitle,
+      .item-description {
+        font-size: 12px;
+      }
+
+      .profile-photo {
+        display: none;
+      }
+
+      .contact-links {
+        margin-left: 0;
+      }
+    }
+
+    /* Touch-friendly scrollbar on mobile */
+    @media (hover: none) and (pointer: coarse) {
+      section {
+        scrollbar-color: var(--line-color) transparent;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-percentage" id="loading-percentage">0%</div>
+    </div>
+  </div>
+
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Main Content Wrapper (for swipe animation) -->
+  <div class="main-wrapper" id="main-wrapper">
+
+  <!-- Mobile top bar: theme toggle + hamburger (visible only on mobile) -->
+  <div class="mobile-top-bar" id="mobile-top-bar">
+    <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle dark mode"></button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+
+  <div class="layout">
+    <!-- Left sidebar with navigation -->
+    <nav class="sidebar" id="sidebar">
+      <div class="nav-links">
+        <button class="nav-item active" data-target="about">About</button>
+        <button class="nav-item" data-target="projects">Projects</button>
+        <button class="nav-item" data-target="writing">Writing</button>
+        <button class="nav-item" data-target="experience">Experience</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"></button>
+      </div>
+
+    </nav>
+
+    <!-- Right scrollable content -->
+    <main class="content">
+      <!-- Scroll indicator arrow -->
+      <div class="scroll-indicator" id="scroll-indicator">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+
+      <!-- ABOUT -->
+       <section id="about" class="active">
+        <div class="section-description about-intro">
+		Hi, I'm David Okeke, a repeat founder and product manager who designs and builds what I manage, from Figma to shipped HTML/CSS, taking financial infrastructure and commerce products from zero to one, across <span class="typewriter-text" id="typewriter-text"></span><span class="typewriter-cursor">|</span>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="section-description">
+          Products built from zero to one. Click a project to read the full story.
+        </div>
+        <div class="items">
+          <div class="item project-item">
+            <div class="item-meta">2025 - Present</div>
+            <div class="item-content">
+              <button class="item-title project-toggle" type="button" aria-expanded="false">
+                <span>Sender AI</span>
+                <span class="toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="item-subtitle">AI-Powered Stablecoin Remittance Infrastructure</div>
+              <a class="item-site-link" href="https://sendar.ai" target="_blank" rel="noopener">sendar.ai ↗</a>
+              <div class="item-description-full">
+                <ul>
+                  <li>Co-founded Sender AI, an AI-powered remittance platform enabling African immigrants in the United States to send money to recipients across 20+ African countries through stablecoin-backed settlement infrastructure.</li>
+                  <li>Brought the product to life as founding product leader, applying a decade of fintech acumen from licensed digital banking: product strategy, customer discovery, roadmap definition, PRDs, and agile delivery across payments, treasury, and compliance functions.</li>
+                  <li>Architected the end-to-end remittance experience across fiat onboarding, stablecoin conversion, blockchain-based treasury movement, compliance workflows, and local payout rails, effectively neobank-grade infrastructure spanning two continents.</li>
+                  <li>Designed proprietary intent-driven AI systems that understand customer requests conversationally and automate transaction guidance, onboarding assistance, support workflows, and operational decision-making.</li>
+                  <li>Designed the full customer experience in Figma, from remittance flows to compliance touchpoints, and converted designs into high-fidelity HTML/CSS interfaces that engineering shipped from directly.</li>
+                  <li>Built on Meta infrastructure and messaging ecosystems to deliver conversational financial experiences that reduce friction throughout the remittance journey.</li>
+                  <li>Led KYC/AML compliance design, regulatory engagement, the fundraising narrative, and strategic partnership development across payments, treasury, and compliance providers to stand up cross-border settlement corridors.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item project-item">
+            <div class="item-meta">2025 - 2026</div>
+            <div class="item-content">
+              <button class="item-title project-toggle" type="button" aria-expanded="false">
+                <span>Stur Africa</span>
+                <span class="toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="item-subtitle">AI-Powered Conversational Commerce &amp; CRM Platform</div>
+              <a class="item-site-link" href="https://stur.africa" target="_blank" rel="noopener">stur.africa ↗</a>
+              <div class="item-description-full">
+                <ul>
+                  <li>Led product management and design for an AI-powered conversational commerce and CRM platform enabling small businesses across Africa to sell directly on WhatsApp, Instagram, and Facebook without a website or app, closing the checkout drop-off caused by fragmented payment links, manual order-taking, and logistics friction.</li>
+                  <li>Personally designed the entire product experience in Figma, covering the merchant storefront, in-chat checkout, order management dashboard, and onboarding flows, and built a reusable component library and design system from scratch.</li>
+                  <li>Converted my own Figma designs into high-fidelity, responsive HTML/CSS interfaces handed directly to engineering, collapsing the design-to-development cycle and ensuring pixel-accurate implementation.</li>
+                  <li>Worked as a Forward Deployed Engineer with early merchants, configuring and integrating the platform on the ground and channeling deployment learnings straight into the product roadmap.</li>
+                  <li>Ran the full product management discipline: PRDs, user stories, acceptance criteria, sprint planning, and backlog prioritization within an agile cadence spanning design, engineering, and GTM.</li>
+                  <li>Shipped a zero-friction merchant storefront where customers browse, chat, and pay entirely within their existing messaging apps, with automated order management, in-chat payment confirmation, and delivery coordination in one flow.</li>
+                  <li>Achieved Meta Business Partner status, validating the platform's technical standards and commercial readiness on WhatsApp Business API infrastructure.</li>
+                  <li>Led end-to-end GTM covering merchant onboarding, pricing model design, activation loop optimization, and early customer discovery, converting social sellers into paying users across multiple African markets.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item project-item">
+            <div class="item-meta">2019 - 2025</div>
+            <div class="item-content">
+              <button class="item-title project-toggle" type="button" aria-expanded="false">
+                <span>Aku Microfinance Bank</span>
+                <span class="toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="item-subtitle">CBN-Licensed Digital Bank</div>
+              <div class="item-description-full">
+                <ul>
+                  <li>Co-founded and led product vision for a CBN-licensed digital microfinance bank; raised $5M+ from Stellar Development Foundation, Firstminute Capital, LoftyInc Capital, and Custodian Investment PLC.</li>
+                  <li>Architected Africa's first interoperable two-way QR payment system, enabling both inbound and outbound transactions from a single identity-anchored code; adopted by the Nigerian government to process $1B+ in NPower social disbursements.</li>
+                  <li>Owned product management across the organization: authored PRDs and product documentation, ran agile sprint ceremonies, prioritized the backlog, and drove the full product lifecycle from architecture to national deployment.</li>
+                  <li>Designed core banking experiences in Figma, including onboarding, tiered-KYC account flows, QR payment journeys, and agent interfaces, and prototyped high-fidelity HTML UIs to de-risk engineering before build, working daily alongside designers and developers as a peer in both crafts.</li>
+                  <li>Served as a Forward Deployed Engineer on government and enterprise rollouts, deploying and configuring wallet and disbursement infrastructure with partner institutions in the field.</li>
+                  <li>Deployed micro-settlement infrastructure across tiered KYC accounts with USSD offline fallback, serving 50,000+ active users including unbanked rural populations.</li>
+                  <li>Secured a ₦19.95M Central Bank of Nigeria contract (Anchor Borrowers Programme) and a production-grade Bank of Industry partnership for national wallet and loan disbursement infrastructure.</li>
+                  <li>Selected for the Visa Accelerator Program (global fintech cohort) and led blockchain payment integration with Stellar Development Foundation for stablecoin remittance corridors.</li>
+                  <li>Managed regulator engagement with CBN and led technical and compliance due diligence with international investors.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item project-item">
+            <div class="item-meta">2021 - 2024</div>
+            <div class="item-content">
+              <button class="item-title project-toggle" type="button" aria-expanded="false">
+                <span>PaTiTi Consulting</span>
+                <span class="toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="item-subtitle">Development Strategy &amp; Digital Advisory</div>
+              <div class="item-description-full">
+                <ul>
+                  <li>Led a $100,000 Ford Foundation consultancy to design a diaspora philanthropy engagement strategy, including two high-level summits (Washington D.C. and London) and a structured database of 100+ diaspora philanthropic actors.</li>
+                  <li>Directed the $101,743 Afreximbank grant program, the Enugu State Trade Digitization and Empowerment Program, digitizing 1,000+ informal traders into Nigeria's formal trade and financial systems.</li>
+                  <li>Applied product management rigor to development-sector delivery: structured documentation, milestone-based agile workplans, and Figma interface concepts for program platforms, briefing external design and engineering vendors as a practitioner rather than a passive client.</li>
+                  <li>Secured and executed public sector technology contracts from Lagos State Government, Bank of Industry, and LASRRA (Lagos State Residents Registration Agency).</li>
+                  <li>Structured consortium delivery across public, private, and development sector actors; served as primary strategist, stakeholder coordinator, and compliance delivery lead.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item project-item">
+            <div class="item-meta">2023</div>
+            <div class="item-content">
+              <button class="item-title project-toggle" type="button" aria-expanded="false">
+                <span>Finvault</span>
+                <span class="toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="item-subtitle">UAE-Based Multi-Currency Fintech</div>
+              <div class="item-description-full">
+                <ul>
+                  <li>Designed and shipped multi-currency digital wallet, savings, and compliance features for a Dubai-headquartered fintech startup.</li>
+                  <li>Owned end-to-end UX in Figma for wallet and savings journeys, from flows and wireframes to high-fidelity screens, and produced HTML/CSS prototypes that accelerated developer implementation and stakeholder sign-off.</li>
+                  <li>Ran agile product delivery with a distributed team of designers and engineers: sprint planning, PRDs, user stories, and release documentation aligned to UAE compliance requirements.</li>
+                  <li>Benchmarked against Dubai's emerging tech sector with a USD salary, bonus, and equity-linked package.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item project-item">
+            <div class="item-meta">2018 - 2019</div>
+            <div class="item-content">
+              <button class="item-title project-toggle" type="button" aria-expanded="false">
+                <span>VBank (VFD Group)</span>
+                <span class="toggle-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="item-subtitle">CBN-Licensed Digital Bank with a Publicly Listed Parent</div>
+              <div class="item-description-full">
+                <ul>
+                  <li>Advised on customer onboarding frameworks for low-documentation users and designed KYC-light lending products.</li>
+                  <li>Designed onboarding UX flows and screen concepts that reduced friction for first-time digital banking users, collaborating directly with in-house design and engineering teams.</li>
+                  <li>Oversaw wallet-to-bank API integration for ecosystem interoperability, documenting requirements and integration specifications for cross-functional teams.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WRITING -->
+      <section id="writing">
+        <div class="section-description">
+          Essays on startups, African markets, and life.
+        </div>
+        <div class="items">
+          <div class="item">
+            <div class="item-meta">2026</div>
+            <div class="item-content">
+              <div class="item-title"><a href="https://shaokhan.substack.com/p/repetition" target="_blank" rel="noopener">Repetition</a></div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-meta"></div>
+            <div class="item-content">
+              <div class="item-title"><a href="https://shaokhan.substack.com/p/only-god-can-help-you-find-a-cofounder" target="_blank" rel="noopener">Only God Can Help You Find a Cofounder</a></div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-meta"></div>
+            <div class="item-content">
+              <div class="item-title"><a href="https://shaokhan.substack.com/p/the-trust-gap-why-africans-will-wait" target="_blank" rel="noopener">The Trust Gap: Why Africans Will Wait 14 Days for a U.S. Delivery But Won't Buy Local Online</a></div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-meta"></div>
+            <div class="item-content">
+              <div class="item-title"><a href="https://shaokhan.substack.com/p/the-affordability-myth-why-african" target="_blank" rel="noopener">The Affordability Myth: Why African Founders Keep Building for Free (And Why That's the Real Problem)</a></div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-meta"></div>
+            <div class="item-content">
+              <div class="item-title"><a href="https://shaokhan.substack.com/p/the-cost-of-being-late" target="_blank" rel="noopener">The Cost of Being Late</a></div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-meta"></div>
+            <div class="item-content">
+              <div class="item-title"><a href="https://shaokhan.substack.com/p/rage-fear-mongering-the-new-attention" target="_blank" rel="noopener">Rage, Fear-Mongering, the New Attention Magnet</a></div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-meta"></div>
+            <div class="item-content">
+              <div class="item-title"><a href="https://shaokhan.substack.com/p/age-is-just-not-a-number-the-african" target="_blank" rel="noopener">Age Is Just Not a Number. The African Perspective on Youth and Responsibility</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       <!-- EXPERIENCE -->
+       <section id="experience">
+        <div class="section-description">
+          Repeat founder and product leader building AI-powered commerce and financial infrastructure.
+        </div>
+        <div class="items">
+          <div class="item">
+            <div class="item-meta">2025 - Present</div>
+            <div class="item-content">
+              <div class="item-title">Co-Founder · Product Management &amp; Design</div>
+              <div class="item-subtitle">Sender AI · AI-Powered Stablecoin Remittance Infrastructure</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-meta">2025 - 2026</div>
+            <div class="item-content">
+              <div class="item-title">Product Management &amp; Design Lead</div>
+              <div class="item-subtitle">Stur Africa · AI-Powered Conversational Commerce &amp; CRM Platform</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-meta">2019 - 2025</div>
+            <div class="item-content">
+              <div class="item-title">Head of Product · Product Management &amp; UX Design</div>
+              <div class="item-subtitle">Aku Microfinance Bank · CBN-Licensed Digital Bank</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-meta">2021 - 2024</div>
+            <div class="item-content">
+              <div class="item-title">Director &amp; Strategic Advisor · Product &amp; Delivery Management</div>
+              <div class="item-subtitle">PaTiTi Consulting · Development Strategy &amp; Digital Advisory</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-meta">2023</div>
+            <div class="item-content">
+              <div class="item-title">Product Lead · Product Management &amp; UI/UX Design</div>
+              <div class="item-subtitle">Finvault · UAE-Based Multi-Currency Fintech</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-meta">2018 - 2019</div>
+            <div class="item-content">
+              <div class="item-title">Product Consultant · Product Management</div>
+              <div class="item-subtitle">VBank (VFD Group) · CBN-Licensed Digital Bank with a Publicly Listed Parent</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- Contact bar — fixed bottom on all screen sizes -->
+  <div class="contact-bar" id="contact-bar">
+    <div class="profile-photo">
+      <img src="profile-picture.png" alt="David Okeke">
+    </div>
+    <div class="contact-links">
+      <a href="mailto:uxwithdavid@gmail.com">Email</a>
+      <span class="dot">&middot;</span>
+      <a href="https://www.linkedin.com/in/david-okeke/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="dot">&middot;</span>
+      <a href="https://x.com/Derealdavid" target="_blank" rel="noopener">X</a>
+    </div>
+  </div>
+
+  </div> <!-- End main-wrapper -->
+
+  <script>
+    // Base path for this GitHub Pages project site (repo served at /Davido/)
+    const REPO_BASE = '/Davido/';
+
+    // Loading Screen Logic
+    const loadingScreen = document.getElementById('loading-screen');
+    const loadingPercentage = document.getElementById('loading-percentage');
+    const mainWrapper = document.getElementById('main-wrapper');
+    
+    let loadingComplete = false;
+    let totalBytes = 0;
+    let loadedBytes = 0;
+    // Update the percentage display
+    function updateProgress() {
+      const percent = totalBytes > 0 ? Math.round((loadedBytes / totalBytes) * 100) : 0;
+      loadingPercentage.textContent = percent + '%';
+    }
+    
+    // Fetch with progress tracking
+    async function fetchWithProgress(url) {
+      try {
+        const response = await fetch(url);
+        const contentLength = response.headers.get('content-length');
+        
+        if (!contentLength) {
+          // If no content-length header, just load it normally
+          const blob = await response.blob();
+          loadedBytes += blob.size;
+          updateProgress();
+          return blob;
+        }
+        
+        const total = parseInt(contentLength, 10);
+        const reader = response.body.getReader();
+        let received = 0;
+        const chunks = [];
+        
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          
+          chunks.push(value);
+          received += value.length;
+          loadedBytes += value.length;
+          updateProgress();
+        }
+        
+        return new Blob(chunks);
+      } catch (e) {
+        // On error, still count as loaded to not block
+        return null;
+      }
+    }
+    
+    // Get file sizes first, then download with progress
+    async function preloadAssets() {
+      const allAssetUrls = ['profile-picture.png'];
+      
+      if (allAssetUrls.length === 0) {
+        completeLoading();
+        return;
+      }
+      
+      // First, get total size of all assets using HEAD requests
+      const sizePromises = allAssetUrls.map(async (url) => {
+        try {
+          const response = await fetch(url, { method: 'HEAD' });
+          const contentLength = response.headers.get('content-length');
+          return contentLength ? parseInt(contentLength, 10) : 50000; // estimate 50KB if unknown
+        } catch (e) {
+          return 50000; // estimate on error
+        }
+      });
+      
+      const sizes = await Promise.all(sizePromises);
+      totalBytes = sizes.reduce((a, b) => a + b, 0);
+      
+      // Now download all assets with progress tracking
+      const downloadPromises = allAssetUrls.map(url => fetchWithProgress(url));
+      await Promise.all(downloadPromises);
+      
+      completeLoading();
+    }
+    
+    function completeLoading() {
+      loadingComplete = true;
+      loadingPercentage.textContent = '100%';
+      
+      // Brief pause at 100%, then transition to content
+      setTimeout(() => {
+        // Animate loading screen up and main content up
+        loadingScreen.classList.add('hidden');
+        mainWrapper.classList.add('visible');
+        
+        // Handle initial route based on URL
+        handleInitialRoute();
+        
+        // Update scroll indicator after content is rendered
+        setTimeout(updateScrollIndicator, 100);
+
+        // Remove loading screen from DOM after animation
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+        }, 800);
+      }, 300);
+    }
+    
+    // Start preloading
+    preloadAssets();
+
+    const navItems = document.querySelectorAll('.nav-item');
+    const sections = document.querySelectorAll('section');
+
+    // Create rounded favicon
+    function createRoundedFavicon() {
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = function() {
+        const canvas = document.createElement('canvas');
+        const size = 32;
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext('2d');
+        
+        // Draw circular clip
+        ctx.beginPath();
+        ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.clip();
+        
+        // Draw image
+        ctx.drawImage(img, 0, 0, size, size);
+        
+        // Update favicon
+        const favicon = document.getElementById('favicon');
+        favicon.href = canvas.toDataURL('image/png');
+      };
+      img.src = 'profile-picture.png';
+    }
+    createRoundedFavicon();
+
+    // Show section function
+    function showSection(targetId, updateUrl = true) {
+      // Hide all sections
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      
+      // Show target section
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.classList.add('active');
+      }
+      
+      // Update nav active state
+      navItems.forEach(nav => {
+        nav.classList.remove('active');
+        if (nav.dataset.target === targetId) {
+          nav.classList.add('active');
+        }
+      });
+      
+      // Update URL if requested
+      if (updateUrl) {
+        const newHash = targetId === 'about' ? '' : '#' + targetId;
+        history.pushState({ section: targetId }, '', REPO_BASE + newHash);
+      }
+      
+      // Update scroll indicator
+      updateScrollIndicator();
+    }
+    
+    // Scroll indicator logic
+    const scrollIndicator = document.getElementById('scroll-indicator');
+    
+    function updateScrollIndicator() {
+      const activeSection = document.querySelector('section.active');
+      if (!activeSection || !scrollIndicator) return;
+      
+      const isScrollable = activeSection.scrollHeight > activeSection.clientHeight;
+      const isAtBottom = activeSection.scrollTop + activeSection.clientHeight >= activeSection.scrollHeight - 20;
+      
+      if (isScrollable && !isAtBottom) {
+        scrollIndicator.classList.add('visible');
+      } else {
+        scrollIndicator.classList.remove('visible');
+      }
+    }
+    
+    // Listen for scroll on all sections
+    sections.forEach(section => {
+      section.addEventListener('scroll', updateScrollIndicator);
+    });
+    
+    // Update on resize
+    window.addEventListener('resize', updateScrollIndicator);
+    
+    // Handle browser back/forward navigation
+    window.addEventListener('popstate', (event) => {
+      if (event.state && event.state.section) {
+        showSection(event.state.section, false);
+      } else {
+        // Default to about if no state
+        const hash = window.location.hash.replace('#', '') || 'about';
+        showSection(hash, false);
+      }
+    });
+    
+    // Handle initial page load based on URL hash
+    function handleInitialRoute() {
+      // External URL redirects (e.g., /Davido/linkedin -> linkedin.com/in/david-okeke)
+      const externalRedirects = {
+        'linkedin': 'https://www.linkedin.com/in/david-okeke/',
+        'x': 'https://x.com/Derealdavid',
+        'twitter': 'https://x.com/Derealdavid',
+        'email': 'mailto:uxwithdavid@gmail.com'
+      };
+
+      // Check if current path (relative to the GitHub Pages project base) matches an external redirect
+      let path = window.location.pathname.toLowerCase();
+      if (path.startsWith(REPO_BASE.toLowerCase())) {
+        path = path.slice(REPO_BASE.length);
+      }
+      path = path.replace(/^\/+|\/+$/g, '');
+      if (externalRedirects[path]) {
+        window.location.replace(externalRedirects[path]);
+        return;
+      }
+
+      const validSections = ['about', 'projects', 'writing', 'experience'];
+
+      // Get section from hash (e.g., #projects -> projects)
+      const hash = window.location.hash.replace('#', '').toLowerCase() || 'about';
+      const targetSection = validSections.includes(hash) ? hash : 'about';
+
+      // Set initial state
+      const newHash = targetSection === 'about' ? '' : '#' + targetSection;
+      history.replaceState({ section: targetSection }, '', REPO_BASE + newHash);
+      showSection(targetSection, false);
+    }
+    
+    // Handle hash change (for direct hash navigation)
+    window.addEventListener('hashchange', () => {
+      const validSections = ['about', 'projects', 'writing', 'experience'];
+      const hash = window.location.hash.replace('#', '').toLowerCase() || 'about';
+      const targetSection = validSections.includes(hash) ? hash : 'about';
+      showSection(targetSection, false);
+    });
+    
+    // Check if we're in mobile layout
+    function isMobileLayout() {
+      return window.innerWidth <= 768;
+    }
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = sidebar.classList.toggle('menu-open');
+      hamburger.classList.toggle('open');
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Click handler for navigation
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const targetId = item.dataset.target;
+        if (sidebar.classList.contains('menu-open')) {
+          // Disable section transitions so the swap is instant behind the overlay
+          sections.forEach(s => s.style.transition = 'none');
+          showSection(targetId);
+          // Force reflow so the instant swap applies before re-enabling transitions
+          document.body.offsetHeight;
+          sections.forEach(s => s.style.transition = '');
+          // Now fade out the menu to reveal the new section already in place
+          sidebar.classList.remove('menu-open');
+          hamburger.classList.remove('open');
+          document.body.style.overflow = '';
+        } else {
+          showSection(targetId);
+        }
+      });
+    });
+
+    // Expandable project cards — exactly one open at a time, one always open
+    const projectItems = document.querySelectorAll('.project-item');
+
+    function openProject(target) {
+      projectItems.forEach(item => {
+        const isTarget = item === target;
+        const btn = item.querySelector('.project-toggle');
+        item.classList.toggle('expanded', isTarget);
+        btn.setAttribute('aria-expanded', isTarget);
+        btn.querySelector('.toggle-icon').textContent = isTarget ? '−' : '+';
+      });
+    }
+
+    projectItems.forEach(item => {
+      item.querySelector('.project-toggle').addEventListener('click', () => openProject(item));
+    });
+
+    if (projectItems.length) openProject(projectItems[0]);
+
+    // Theme toggle with localStorage persistence
+    const themeToggle = document.getElementById('themeToggle');
+    const themeToggleMobile = document.getElementById('themeToggleMobile');
+
+    // Load saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    themeToggle.addEventListener('click', toggleTheme);
+    if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+
+    // Cursor follower with smooth trailing animation (desktop only)
+    const cursorFollower = document.getElementById('cursorFollower');
+    const isTouchDevice = ('ontouchstart' in window || navigator.maxTouchPoints > 0) && window.matchMedia('(hover: none)').matches;
+
+    if (!isTouchDevice) {
+      let mouseX = 0;
+      let mouseY = 0;
+      let followerX = 0;
+      let followerY = 0;
+      const ease = 0.15;
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      function animateFollower() {
+        followerX += (mouseX - followerX) * ease;
+        followerY += (mouseY - followerY) * ease;
+
+        cursorFollower.style.left = followerX + 'px';
+        cursorFollower.style.top = followerY + 'px';
+
+        requestAnimationFrame(animateFollower);
+      }
+      animateFollower();
+
+      // Add hover effect on interactive elements
+      const interactiveElements = document.querySelectorAll('a, button, .theme-toggle');
+      interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursorFollower.classList.add('hovering');
+        });
+        el.addEventListener('mouseleave', () => {
+          cursorFollower.classList.remove('hovering');
+        });
+      });
+    }
+
+    // Typewriter effect for About section
+    const typewriterWords = ['startups.', 'banks.', 'public sector programs.'];
+    const typewriterText = document.getElementById('typewriter-text');
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let isPaused = false;
+    
+    const typingSpeed = 150;      // Speed of typing each character (slower)
+    const deletingSpeed = 100;    // Speed of deleting each character (slower)
+    const pauseAfterWord = 2500;  // Pause after typing complete word (longer)
+    const pauseBeforeDelete = 800; // Brief pause before starting to delete
+    
+    function typeWriter() {
+      const currentWord = typewriterWords[wordIndex];
+      
+      if (isPaused) {
+        return;
+      }
+      
+      if (!isDeleting) {
+        // Typing
+        typewriterText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+        
+        if (charIndex === currentWord.length) {
+          // Finished typing, pause then start deleting
+          isPaused = true;
+          setTimeout(() => {
+            isPaused = false;
+            isDeleting = true;
+            typeWriter();
+          }, pauseAfterWord);
+          return;
+        }
+      } else {
+        // Deleting
+        typewriterText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+        
+        if (charIndex === 0) {
+          // Finished deleting, move to next word
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % typewriterWords.length;
+          
+          // Brief pause before typing next word
+          isPaused = true;
+          setTimeout(() => {
+            isPaused = false;
+            typeWriter();
+          }, pauseBeforeDelete);
+          return;
+        }
+      }
+      
+      const speed = isDeleting ? deletingSpeed : typingSpeed;
+      setTimeout(typeWriter, speed);
+    }
+    
+    // Start typewriter effect
+    typeWriter();
+  </script>
+</body>
+</html>

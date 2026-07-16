@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - Redirecting...</title>
+  <script>
+    const REPO_BASE = '/Davido/';
+
+    // External URL redirects
+    const externalRedirects = {
+      'linkedin': 'https://www.linkedin.com/in/david-okeke/',
+      'x': 'https://x.com/Derealdavid',
+      'twitter': 'https://x.com/Derealdavid',
+      'email': 'mailto:uxwithdavid@gmail.com'
+    };
+
+    let path = window.location.pathname.toLowerCase();
+    if (path.startsWith(REPO_BASE.toLowerCase())) {
+      path = path.slice(REPO_BASE.length);
+    }
+    path = path.replace(/^\/+|\/+$/g, '');
+
+    if (externalRedirects[path]) {
+      window.location.replace(externalRedirects[path]);
+    } else {
+      // Redirect to home page for any unknown paths
+      window.location.replace(REPO_BASE);
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
